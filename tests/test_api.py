@@ -2,15 +2,11 @@
 
 import json
 import socket
-import sys
 import threading
 import unittest
-from pathlib import Path
 from urllib.error import HTTPError
 from urllib.request import Request, urlopen
 from http.server import ThreadingHTTPServer
-
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
 from api_server import MatrixHandler
 from api_client import swap_rows_remote

@@ -23,3 +23,9 @@ def test_keeps_rows_when_extremes_are_together():
 def test_rejects_number_outside_float_range():
     with pytest.raises(ValueError, match="Все числа должны быть конечными"):
         swap_extreme_rows([[10**400]])
+
+
+@pytest.mark.parametrize("matrix", [None, 5, []], ids=["none", "number", "empty"])
+def test_rejects_invalid_matrix_container(matrix):
+    with pytest.raises(ValueError, match="Матрица должна быть непустым списком"):
+        swap_extreme_rows(matrix)

@@ -63,7 +63,7 @@ curl http://127.0.0.1:8000/health
 Все автоматические тесты:
 
 ```bash
-python -m unittest discover -s tests -v
+PYTHONPATH=src python -m unittest discover -s tests -v
 ```
 
 Документация:
